@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -10,12 +12,13 @@ body {
 .container {
   margin: auto;
   width: fit-content;
+  --background-white: wheat;
 }
 
 .sudoku {
   padding: 10px;
-  box-shadow: 20px 20px #66696977;
-  background: wheat;
+  box-shadow: 20px 10px #66696977;
+  background: var(--background-white);
   border: 2px solid rgb(2, 2, 2);
 }
 
@@ -24,15 +27,17 @@ body {
   width: fit-content;
 
   --col-dimension: 50px;
-  --border: 4px solid #000;
+  --border-color: #111;
+  --font-size: 20px;
+  --border: 4px solid var(--border-color);
 }
 
 .col {
   height: var(--col-dimension);
   width: var(--col-dimension);
   line-height: var(--col-dimension);
-  border: 1px solid #00000093;
-  font-size: 20px;
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size);
   transition: all 300ms;
   text-align: center;
   color: #111111;
@@ -54,39 +59,54 @@ body {
   border-top: var(--border);
 }
 
-input[type="range"] {
+.range input[type="range"] {
   display: block;
   width: 100%;
-  color: red;
   -webkit-appearance: none;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+.range input[type="range"]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   background-color: lightcoral;
   height: 10px;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.range input[type="range"]::-webkit-slider-thumb {
   width: 10px;
   -webkit-appearance: none;
   height: 10px;
   cursor: ew-resize;
-  background: wheat;
+  background: var(--background-white);
   border-radius: 20px;
   box-shadow: 0 0 0 4px black;
 }
 
 .range {
-  background: wheat;
+  background: var(--background-white);
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   border: 2px solid #000;
-  box-shadow: 3px 3px #6669697a;
+  box-shadow: 20px 5px #6669697a;
+}
+
+.range label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 500px) {
   .row {
-    --col-dimension: 35px;
+    --col-dimension: 30px;
+    --font-size: 18px;
+    --border: 3px solid var(--border-color);
+  }
+}
+
+@media (max-width: 300px) {
+  .row {
+    --col-dimension: 25px;
+    --font-size: 16px;
+    --border: 2px solid var(--border-color);
   }
 }
