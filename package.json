@@ -1,5 +1,12 @@
 {
-  "version": "0.0.0",
+  "name": "sudoku-solver-visualizer",
+  "version": "1.0.0",
+  "description": "Visualize sudoku solver using backtracking",
+  "license": "MIT",
+  "author": {
+    "name": "Roshan Acharya",
+    "email": "acharyaroshan2357@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
