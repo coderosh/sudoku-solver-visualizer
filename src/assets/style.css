@@ -15,7 +15,7 @@ body {
   --background-white: wheat;
 }
 
-.sudoku {
+.board {
   padding: 10px;
   box-shadow: 20px 10px #66696977;
   background: var(--background-white);

@@ -1,10 +1,10 @@
-export function sleep(ms = 500) {
-  return new Promise((res) => setInterval(res, ms));
-}
+export const sleep = (ms = 1000) => new Promise((res) => setTimeout(res, ms));
 
-export function getSpeed() {
-  return (
-    +document.querySelector("input")!.max -
-    +document.querySelector("input")!.value
+export function createBoard(arr: number[][]) {
+  return arr.map((row) =>
+    row.map((val) => ({
+      value: val,
+      background: "transparent",
+    }))
   );
 }
