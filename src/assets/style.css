@@ -10,102 +10,25 @@ body {
 }
 
 .container {
-  margin: auto;
-  width: fit-content;
-  --background-white: wheat;
-}
-
-.board {
-  padding: 10px;
-  box-shadow: 20px 10px #66696977;
-  background: var(--background-white);
-  border: 2px solid rgb(2, 2, 2);
-}
-
-.row {
-  display: flex;
-  width: fit-content;
-
-  --col-dimension: 50px;
+  --cell-dimension: 50px;
   --border-color: #111;
   --font-size: 20px;
   --border: 4px solid var(--border-color);
-}
-
-.col {
-  height: var(--col-dimension);
-  width: var(--col-dimension);
-  line-height: var(--col-dimension);
-  border: 1px solid var(--border-color);
-  font-size: var(--font-size);
-  transition: all 300ms;
-  text-align: center;
-  color: #111111;
-}
-
-.col:nth-child(3n) {
-  border-right: var(--border);
-}
-
-.col:first-child {
-  border-left: var(--border);
-}
-
-.row:nth-child(3n) {
-  border-bottom: var(--border);
-}
-
-.row:first-child {
-  border-top: var(--border);
-}
-
-.range input[type="range"] {
-  display: block;
-  width: 100%;
-  -webkit-appearance: none;
-}
-
-.range input[type="range"]::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  background-color: lightcoral;
-  height: 10px;
-}
-
-.range input[type="range"]::-webkit-slider-thumb {
-  width: 10px;
-  -webkit-appearance: none;
-  height: 10px;
-  cursor: ew-resize;
-  background: var(--background-white);
-  border-radius: 20px;
-  box-shadow: 0 0 0 4px black;
-}
-
-.range {
-  background: var(--background-white);
-  padding: 10px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  border: 2px solid #000;
-  box-shadow: 20px 5px #6669697a;
-}
-
-.range label {
-  display: block;
-  margin-bottom: 5px;
+  --background-white: wheat;
+  --shadow-color: #66696977;
 }
 
 @media (max-width: 500px) {
-  .row {
-    --col-dimension: 30px;
-    --font-size: 18px;
+  .container {
+    --cell-dimension: 30px;
+    --font-size: 17px;
     --border: 3px solid var(--border-color);
   }
 }
 
 @media (max-width: 300px) {
-  .row {
-    --col-dimension: 25px;
+  .container {
+    --cell-dimension: 25px;
     --font-size: 16px;
     --border: 2px solid var(--border-color);
   }

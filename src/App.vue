@@ -153,3 +153,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.container {
+  margin: auto;
+  width: fit-content;
+}
+</style>

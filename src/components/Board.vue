@@ -21,3 +21,12 @@ export default defineComponent({
   props: ["board"],
 });
 </script>
+
+<style scoped>
+.board {
+  padding: 10px;
+  box-shadow: 20px 10px var(--shadow-color);
+  background: var(--background-white);
+  border: 2px solid var(--border-color);
+}
+</style>

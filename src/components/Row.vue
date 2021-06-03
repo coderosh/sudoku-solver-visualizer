@@ -14,3 +14,18 @@ export default defineComponent({
   props: ["row"],
 });
 </script>
+
+<style scoped>
+.row {
+  display: flex;
+  width: fit-content;
+}
+
+.row:nth-child(3n) {
+  border-bottom: var(--border);
+}
+
+.row:first-child {
+  border-top: var(--border);
+}
+</style>
