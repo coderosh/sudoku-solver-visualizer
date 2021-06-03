@@ -8,14 +8,16 @@
     />
     <board :board="board" />
   </div>
+  <github-corner repo="coderosh/sudoku-solver-visualizer" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { createBoard, sleep } from "./utils";
-import Slider from "./components/Slider.vue";
 import Board from "./components/Board.vue";
+import Slider from "./components/Slider.vue";
+import { createBoard, sleep } from "./utils";
+import GithubCorner from "./components/GithubCorner.vue";
 
 const board = createBoard([
   [0, 5, 0, 0, 0, 7, 0, 0, 8],
@@ -34,6 +36,7 @@ export default defineComponent({
   components: {
     Slider,
     Board,
+    GithubCorner,
   },
   data() {
     return {
